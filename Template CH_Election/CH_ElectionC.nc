@@ -5,8 +5,7 @@ module CH_ElectionC {
 
 implementation {
   command CH_Election.selectCH(map<K,V>){
-		uint16_t aux;
-		return aux;	
+		
 	}
 }
 
