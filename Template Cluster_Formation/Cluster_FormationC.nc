@@ -5,8 +5,7 @@ module Cluster_FormationC {
 
 implementation {
   command Cluster_Formation.join(map<K,V>){
-		uint16_t aux;
-		return aux;	
+			
 	}
 }
 
