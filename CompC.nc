@@ -3,8 +3,8 @@ module CompC @safe(){
 	
 	uses{
 
-	//GENERAL
-  interface Boot;
+	//GERAL
+  	interface Boot;
 
 	//LIBRARY_AGGREGGATION
 	interface Library_Agreggation;
