@@ -22,5 +22,5 @@ implementation {
 	//CLUSTER_FORMATION
 	components Cluster_FormationC;
 	App -> Cluster_FormationC.Cluster_Formation;
-
+	
 }
