@@ -2,20 +2,24 @@
 module Coordinator(){
 
 	uses{
- 	interface Boot;
- 	interface Packet;
- 	interface AMSend;
- 	interface Receive;
- 	interface SplitControl as AMControl;
- 	interface Timer<TMilli> as Timer0;
-	interface compSensor as ComponentsSensor;
- 	interface compLibMSG as ComponentsLibMessage;
+ 		interface Boot;
+ 		interface Packet;
+ 		interface AMSend;
+ 		interface Receive;
+ 		interface SplitControl as AMControl;
+ 		interface Timer<TMilli> as Timer0;
+		
+		interface compSensor as WSN_ComponentsSensor;
+		interface compCH as WSN_ComponentsCH;
+		interface compCM as WSN_ComponentsCM;
+ 		interface compLibMSG as ComponentsLibMessage;
  	}
  
 } implementation{
 
 	uint16_t controlState;
 	message_t pkt;
+	
 	const p = 0.2;	
 	const tCluster = 25;
 	const tExit = 0.1;	
@@ -23,7 +27,7 @@ module Coordinator(){
 	double RSS;
 	uint16_t myCH;	
 	uint16_t myID  = compSensor->getSensorId();
-	map<uint16_t, double>  knownCHs;	
+	map <uint16_t, double>  knownCHs;	
 	list<uint16_t>  sensorList;
 	
 	void state_Select_CH(){
